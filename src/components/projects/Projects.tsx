@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { projects, years, type Project } from '../../data/projects'
+import { projects, years, type Project } from '../../lib/content'
 import { Carousel } from './Carousel'
 import { ProjectDialog } from './ProjectDialog'
 
@@ -53,7 +53,7 @@ export function Projects() {
               <p className="text-mist">{g.blurb}</p>
             </div>
             <Carousel
-              label={`${g.label} projects`}
+              label={`${g.label.replace(/ projects$/i, "")} projects`}
               projects={g.items}
               onOpen={(project, videos) => setOpen({ project, videos: !!videos })}
             />

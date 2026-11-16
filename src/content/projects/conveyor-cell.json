@@ -1,0 +1,80 @@
+{
+  "title": "Conveyor Sorting & SCARA Palletizing Cell",
+  "year": "junior",
+  "order": 1,
+  "course": "ROBO 301, Robotics and Automation",
+  "period": "Nov – Dec 2025",
+  "role": "PLC, HMI and robot programming",
+  "highlight": "",
+  "status": "",
+  "summary": "A dual-conveyor line that sorts parts by height and material, assembles a product and hands it to a robot arm.",
+  "problem": "Run a two-belt manufacturing cell from a single start button: sort washers on the top belt, assemble finished products on the bottom belt, and palletize them with a SCARA arm.",
+  "approach": "I wrote the ladder logic for a CLICK PLC as a chain of phases. A height probe checks each washer, an inductive sensor checks for metal, and solenoids push good parts into plastic or metal chutes while out-of-spec parts go to scrap. Counters release a base once both chutes are stocked, steer finished products into a 2 × 2 pattern, and start the Epson T3 SCARA arm through its discrete I/O once four are ready. The arm runs a SPEL palletizing program with an OnRobot vacuum gripper, and a C-more HMI provides the start button.",
+  "result": "The top belt sorted by height and material and the bottom belt assembled and arranged products as designed. The gripper’s communication cable was missing, so the palletizing program was proven in the Epson RC+ simulator rather than on the arm. Next steps: a faster height sensor, a shift register to test several washers at once, and production counts on the HMI.",
+  "tags": [
+    "PLC ladder logic",
+    "HMI",
+    "Epson SCARA",
+    "SPEL",
+    "Industrial automation"
+  ],
+  "cover": {
+    "image": "/media/conveyor-cell/block-diagram-thumb.webp",
+    "alt": "Block diagram of the PLC, conveyor, HMI and robot arm",
+    "fit": "contain"
+  },
+  "coverIcon": "none",
+  "gallery": [
+    {
+      "file": "/media/conveyor-cell/block-diagram.webp",
+      "thumb": "/media/conveyor-cell/block-diagram-thumb.webp",
+      "poster": "",
+      "alt": "System block diagram: PLC, I/O cards, conveyor, HMI and arm",
+      "caption": "System block diagram: PLC, I/O cards, conveyor, HMI and arm"
+    },
+    {
+      "file": "/media/conveyor-cell/ladder-1.webp",
+      "thumb": "/media/conveyor-cell/ladder-1-thumb.webp",
+      "poster": "",
+      "alt": "Ladder logic rungs 1–6: dispenser, top belt and sensor timing",
+      "caption": "Ladder logic rungs 1–6: dispenser, top belt and sensor timing"
+    },
+    {
+      "file": "/media/conveyor-cell/ladder-2.webp",
+      "thumb": "/media/conveyor-cell/ladder-2-thumb.webp",
+      "poster": "",
+      "alt": "Rungs 7–13: height probe and good or bad height checks",
+      "caption": "Rungs 7–13: height probe and good or bad height checks"
+    },
+    {
+      "file": "/media/conveyor-cell/ladder-end.webp",
+      "thumb": "/media/conveyor-cell/ladder-end-thumb.webp",
+      "poster": "",
+      "alt": "Final rungs: product counter that starts the robot arm",
+      "caption": "Final rungs: product counter that starts the robot arm"
+    },
+    {
+      "file": "/media/conveyor-cell/hmi.webp",
+      "thumb": "/media/conveyor-cell/hmi-thumb.webp",
+      "poster": "",
+      "alt": "HMI start button",
+      "caption": "HMI start button"
+    },
+    {
+      "file": "/media/conveyor-cell/arm-points.webp",
+      "thumb": "/media/conveyor-cell/arm-points-thumb.webp",
+      "poster": "",
+      "alt": "Taught pick and pallet points for the SCARA arm",
+      "caption": "Taught pick and pallet points for the SCARA arm"
+    },
+    {
+      "file": "/media/conveyor-cell/spel-program.webp",
+      "thumb": "/media/conveyor-cell/spel-program-thumb.webp",
+      "poster": "",
+      "alt": "SPEL palletizing program",
+      "caption": "SPEL palletizing program"
+    }
+  ],
+  "videos": [],
+  "links": []
+}

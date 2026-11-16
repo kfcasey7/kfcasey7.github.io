@@ -1,0 +1,65 @@
+{
+  "title": "Predicting Robot Navigation Outcomes",
+  "year": "junior",
+  "order": 3,
+  "course": "CS 368, Data Mining",
+  "period": "Spring 2026",
+  "role": "Team of three",
+  "highlight": "",
+  "status": "",
+  "summary": "Machine-learning models that predict whether a robot’s navigation run ends in success, collision, partial completion or timeout.",
+  "problem": "Given time-stepped sensor and movement logs from autonomous navigation runs, can a model tell how a run will end, and which signals drive that outcome?",
+  "approach": "We collapsed each run’s time steps into one row (for example, lowest battery level, closest obstacle and whether a collision ever occurred), scaled the features, and compared SVM, k-means, KNN, decision tree and random forest models, sweeping each model’s key parameter and checking 5-fold cross-validation for consistency.",
+  "result": "Decision trees and random forests were the strongest and most consistent models. Per-run aggregation and feature scaling both made a large difference, and path smoothness and the collision flag carried most of the signal. No model could pick out timeouts, which suggests they depend on factors the dataset doesn’t record.",
+  "tags": [
+    "Python",
+    "scikit-learn",
+    "Machine learning",
+    "Data mining"
+  ],
+  "cover": {
+    "image": "/media/nav-prediction/decision-tree-thumb.webp",
+    "alt": "Decision tree diagram",
+    "fit": "contain"
+  },
+  "coverIcon": "none",
+  "gallery": [
+    {
+      "file": "/media/nav-prediction/decision-tree.webp",
+      "thumb": "/media/nav-prediction/decision-tree-thumb.webp",
+      "poster": "",
+      "alt": "First three levels of the decision tree",
+      "caption": "First three levels of the decision tree"
+    },
+    {
+      "file": "/media/nav-prediction/class-distribution.webp",
+      "thumb": "/media/nav-prediction/class-distribution-thumb.webp",
+      "poster": "",
+      "alt": "How the runs split across the four outcomes",
+      "caption": "How the runs split across the four outcomes"
+    },
+    {
+      "file": "/media/nav-prediction/confusion-matrix.webp",
+      "thumb": "/media/nav-prediction/confusion-matrix-thumb.webp",
+      "poster": "",
+      "alt": "Random forest confusion matrix",
+      "caption": "Random forest confusion matrix"
+    },
+    {
+      "file": "/media/nav-prediction/feature-importance.webp",
+      "thumb": "/media/nav-prediction/feature-importance-thumb.webp",
+      "poster": "",
+      "alt": "Random forest feature importance",
+      "caption": "Random forest feature importance"
+    },
+    {
+      "file": "/media/nav-prediction/clusters.webp",
+      "thumb": "/media/nav-prediction/clusters-thumb.webp",
+      "poster": "",
+      "alt": "k-means clusters compared with the true outcomes",
+      "caption": "k-means clusters compared with the true outcomes"
+    }
+  ],
+  "videos": [],
+  "links": []
+}

@@ -1,0 +1,29 @@
+{
+  "years": [
+    {
+      "id": "freshman",
+      "label": "Freshman year",
+      "blurb": "First builds: sensors, motors and a working model."
+    },
+    {
+      "id": "sophomore",
+      "label": "Sophomore year",
+      "blurb": "Robot cars, web control and data structures."
+    },
+    {
+      "id": "junior",
+      "label": "Junior year",
+      "blurb": "Industrial automation, closed-loop control and machine learning."
+    },
+    {
+      "id": "senior",
+      "label": "Senior year",
+      "blurb": "A humanoid capstone and a summer in the field."
+    },
+    {
+      "id": "personal",
+      "label": "Personal projects",
+      "blurb": "Things I build because I want to use them."
+    }
+  ]
+}

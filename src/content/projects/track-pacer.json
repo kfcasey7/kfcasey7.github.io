@@ -1,0 +1,60 @@
+{
+  "title": "Track Pacing Robot",
+  "year": "personal",
+  "order": 1,
+  "course": "",
+  "period": "May 2025 – present",
+  "role": "Solo design project",
+  "highlight": "",
+  "status": "Building and bench testing",
+  "summary": "A 1/10-scale robot that follows the lane line at a programmed pace so a runner can chase it.",
+  "problem": "Without a pacer, runners go out too fast and fade, and only learn how far off they were after the rep. As a cross-country runner I wanted an objective, portable pacer that holds a speed, switches between work and recovery on its own, and sets up from a phone.",
+  "approach": "The system is split by timescale. An Arduino runs a 100 Hz PID speed loop from an encoder on the rear axle, damps steering with a gyro, and drops to neutral if commands stop for 500 ms. A Raspberry Pi running ROS 2 handles OpenCV lane following, workout segments and the phone interface. A sensored brushless motor and a 9:1 belt reduction put race pace at mid-throttle, so the controller always has headroom.",
+  "result": "Hardware is selected and documented, the ESC is calibrated, and the firmware and ROS 2 nodes are drafted while the chassis is modeled in Fusion for 3D printing. Pacing accuracy will be measured lap by lap on a real track before I claim it.",
+  "tags": [
+    "ROS 2",
+    "Python",
+    "Arduino C++",
+    "PID control",
+    "OpenCV",
+    "Autodesk Fusion"
+  ],
+  "cover": {
+    "image": "/media/track-pacer/cad-render-thumb.webp",
+    "alt": "CAD render of the pacing robot chassis",
+    "fit": "contain"
+  },
+  "coverIcon": "none",
+  "gallery": [
+    {
+      "file": "/media/track-pacer/cad-render.webp",
+      "thumb": "/media/track-pacer/cad-render-thumb.webp",
+      "poster": "",
+      "alt": "Chassis concept render",
+      "caption": "Chassis concept render"
+    },
+    {
+      "file": "/media/track-pacer/printed-prototype.webp",
+      "thumb": "/media/track-pacer/printed-prototype-thumb.webp",
+      "poster": "",
+      "alt": "Printed parts in progress",
+      "caption": "Printed parts in progress"
+    },
+    {
+      "file": "/media/track-pacer/architecture.webp",
+      "thumb": "/media/track-pacer/architecture-thumb.webp",
+      "poster": "",
+      "alt": "System architecture: the Arduino holds the speed loop, the Pi sends setpoints",
+      "caption": "System architecture: the Arduino holds the speed loop, the Pi sends setpoints"
+    },
+    {
+      "file": "/media/track-pacer/clip.mp4",
+      "thumb": "",
+      "poster": "/media/track-pacer/clip-poster.webp",
+      "alt": "Short clip of the printed parts",
+      "caption": "Printed parts, short clip"
+    }
+  ],
+  "videos": [],
+  "links": []
+}

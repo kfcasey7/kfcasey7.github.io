@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
-import type { Media } from '../../data/projects'
+import type { Media } from '../../lib/content'
 
 type Props = {
   items: Media[]

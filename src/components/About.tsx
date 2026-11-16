@@ -1,5 +1,5 @@
 import { GraduationCap } from 'lucide-react'
-import { profile } from '../data/profile'
+import { profile } from '../lib/content'
 import { Section } from './Section'
 
 export function About() {
@@ -40,7 +40,7 @@ export function About() {
               <p className="font-medium text-bone">{profile.education.school}</p>
               <p className="text-mist">{profile.education.degree}</p>
               <p className="text-sm text-mist">
-                {profile.education.detail}, {profile.education.period}
+                {[profile.education.detail, profile.education.period].filter(Boolean).join(', ')}
               </p>
             </div>
           </div>

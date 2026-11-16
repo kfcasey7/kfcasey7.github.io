@@ -1,5 +1,5 @@
 import { BookOpenText, Truck } from 'lucide-react'
-import type { Project } from '../../data/projects'
+import type { Project } from '../../lib/content'
 
 // Image cover, or a drawn cover for projects without shareable photos.
 export function Cover({ project, className = '' }: { project: Project; className?: string }) {

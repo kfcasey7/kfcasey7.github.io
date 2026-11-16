@@ -1,0 +1,24 @@
+{
+  "title": "TractEasy Internship",
+  "year": "senior",
+  "order": 2,
+  "course": "Project management & field service engineering",
+  "period": "Summer 2026",
+  "role": "Intern, Denver, CO",
+  "highlight": "",
+  "status": "",
+  "summary": "Field service on autonomous electric tow tractors, plus two internal tools: a deployment tracker and an AI-assisted onboarding guide.",
+  "problem": "Deploying a vehicle is a lot for a new field service engineer. Beyond technical skill it takes documentation, strict timelines and organization, and shadowing alone doesn’t teach all of that.",
+  "approach": "I built Flown, a Python and PyQt6 desktop tool that combines a node-based deployment flowchart, a Gantt chart, a progress tracker, an instructional guide and a document generator. I also used the company’s AI tools to build an interactive onboarding and training resource from approved documentation.",
+  "result": "Engineers who tried Flown said it would have helped during their own onboarding and that they’d prefer it to a shared document. In the field I diagnosed and resolved hardware, software and integration issues and coordinated deployments with site managers.",
+  "tags": [
+    "Python",
+    "PyQt6",
+    "Field service",
+    "Project management"
+  ],
+  "coverIcon": "truck",
+  "gallery": [],
+  "videos": [],
+  "links": []
+}

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Play, Trophy } from 'lucide-react'
-import type { Project } from '../../data/projects'
+import type { Project } from '../../lib/content'
 import { Cover } from './Cover'
 
 type Props = {

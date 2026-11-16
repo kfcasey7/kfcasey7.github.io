@@ -1,0 +1,110 @@
+{
+  "title": "PID-Controlled Elevator",
+  "year": "junior",
+  "order": 2,
+  "course": "ME 405, Mechatronics System Design",
+  "period": "Junior year",
+  "role": "Two-person team",
+  "highlight": "",
+  "status": "",
+  "summary": "A model elevator that moves between floors under closed-loop PID control, with homing, a request queue and end stops.",
+  "problem": "Move an elevator cab to requested floors accurately and smoothly, and serve several requests in the order they arrive.",
+  "approach": "An ultrasonic sensor measures cab height, limit switches set the floor positions, and LabVIEW running on National Instruments DAQ hardware closes a PID loop on a geared motor through a PWM servo amplifier. Floor requests go into a first-in, first-out queue. We started from the equations of motion, 3D-printed the mounts and cab parts, and tested in stages: sensors alone, manual control, a PD controller on a setpoint, auto homing, then full floor sequences, with end stops added as a safeguard.",
+  "result": "The elevator positioned reliably under closed-loop control and ran homing, queued floor sequences and end-stop tests (see the videos). The main limit was the DAQ hardware’s analog, digital and counter channels. Next steps: more precise position sensing, less vibration, more floors and smarter scheduling.",
+  "tags": [
+    "LabVIEW",
+    "NI DAQ",
+    "PID control",
+    "Ultrasonic sensing",
+    "3D printing"
+  ],
+  "cover": {
+    "image": "/media/pid-elevator/cab-thumb.webp",
+    "alt": "Elevator cab on an aluminum rail in the lab",
+    "fit": "cover"
+  },
+  "coverIcon": "none",
+  "gallery": [
+    {
+      "file": "/media/pid-elevator/elevator-rig.webp",
+      "thumb": "/media/pid-elevator/elevator-rig-thumb.webp",
+      "poster": "",
+      "alt": "Full elevator rig on the lab bench",
+      "caption": "Full elevator rig on the lab bench"
+    },
+    {
+      "file": "/media/pid-elevator/cab.webp",
+      "thumb": "/media/pid-elevator/cab-thumb.webp",
+      "poster": "",
+      "alt": "Printed cab riding the aluminum rail",
+      "caption": "Printed cab riding the aluminum rail"
+    },
+    {
+      "file": "/media/pid-elevator/sensor-mount.webp",
+      "thumb": "/media/pid-elevator/sensor-mount-thumb.webp",
+      "poster": "",
+      "alt": "Base mount with the ultrasonic sensor",
+      "caption": "Base mount with the ultrasonic sensor"
+    },
+    {
+      "file": "/media/pid-elevator/pid-response.webp",
+      "thumb": "/media/pid-elevator/pid-response-thumb.webp",
+      "poster": "",
+      "alt": "Setpoint and measured height during a floor change",
+      "caption": "Setpoint and measured height during a floor change"
+    },
+    {
+      "file": "/media/pid-elevator/system-integration.webp",
+      "thumb": "/media/pid-elevator/system-integration-thumb.webp",
+      "poster": "",
+      "alt": "System integration diagram",
+      "caption": "System integration diagram"
+    },
+    {
+      "file": "/media/pid-elevator/electrical.webp",
+      "thumb": "/media/pid-elevator/electrical-thumb.webp",
+      "poster": "",
+      "alt": "Electrical design",
+      "caption": "Electrical design"
+    },
+    {
+      "file": "/media/pid-elevator/cad-bracket.webp",
+      "thumb": "/media/pid-elevator/cad-bracket-thumb.webp",
+      "poster": "",
+      "alt": "CAD of a motor bracket",
+      "caption": "CAD of a motor bracket"
+    },
+    {
+      "file": "/media/pid-elevator/cad-base.webp",
+      "thumb": "/media/pid-elevator/cad-base-thumb.webp",
+      "poster": "",
+      "alt": "CAD of the rail base",
+      "caption": "CAD of the rail base"
+    },
+    {
+      "file": "/media/pid-elevator/hand-calcs.webp",
+      "thumb": "/media/pid-elevator/hand-calcs-thumb.webp",
+      "poster": "",
+      "alt": "Hand calculations for the equations of motion",
+      "caption": "Hand calculations for the equations of motion"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Homing",
+      "file": "/media/pid-elevator/homing.mp4",
+      "poster": "/media/pid-elevator/homing-poster.webp"
+    },
+    {
+      "title": "Queued floor requests",
+      "file": "/media/pid-elevator/queue.mp4",
+      "poster": "/media/pid-elevator/queue-poster.webp"
+    },
+    {
+      "title": "End-stop test",
+      "file": "/media/pid-elevator/end-stop.mp4",
+      "poster": "/media/pid-elevator/end-stop-poster.webp"
+    }
+  ],
+  "links": []
+}

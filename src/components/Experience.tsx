@@ -1,9 +1,9 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { Bot, Tent, Truck, Users } from 'lucide-react'
-import { experience } from '../data/experience'
+import { Award, Bot, BriefcaseBusiness, Tent, Truck, Users } from 'lucide-react'
+import { experience } from '../lib/content'
 import { Section } from './Section'
 
-const icons = { truck: Truck, users: Users, bot: Bot, tent: Tent }
+const icons = { truck: Truck, users: Users, bot: Bot, tent: Tent, briefcase: BriefcaseBusiness, award: Award }
 
 export function Experience() {
   const reduce = useReducedMotion()
@@ -12,7 +12,7 @@ export function Experience() {
       <ol className="relative">
         <span aria-hidden="true" className="absolute bottom-0 left-5 top-0 w-px bg-line md:left-1/2" />
         {experience.map((item, i) => {
-          const Icon = icons[item.icon]
+          const Icon = icons[item.icon] ?? BriefcaseBusiness
           const left = i % 2 === 0
           return (
             <li key={item.title} className="relative grid pb-14 last:pb-0 md:grid-cols-2 md:gap-16">

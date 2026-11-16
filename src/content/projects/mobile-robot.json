@@ -1,0 +1,67 @@
+{
+  "title": "Wi-Fi Controlled Mobile Robot",
+  "year": "sophomore",
+  "order": 1,
+  "course": "ROBO 201, Introduction to Robotics",
+  "period": "Spring 2025",
+  "role": "Group project; I did most of the work",
+  "highlight": "",
+  "status": "",
+  "summary": "A Raspberry Pi and Arduino robot car you drive from any laptop or phone on the same Wi-Fi.",
+  "problem": "Build a mobile robot that pulls together the sensors, motors and programming from the course labs, and make it easy to drive without buying a dedicated controller.",
+  "approach": "A Flask web server on the Raspberry Pi captures key presses in the browser and sends them over USB serial to an Arduino, which drives two DC motors through an L298N driver. I added a phone page with buttons, LED turn signals, a time-of-flight distance sensor and a direction-hold mode. The body went from a cardboard prototype to a 3D-printed housing with mounts for the sensor and LEDs.",
+  "result": "A working robot that drives, responds to keyboard or phone input and reports distance on request. Choosing a web page over a Bluetooth controller means any device on the network can drive it, and the whole build could be made for under $100.",
+  "tags": [
+    "Raspberry Pi",
+    "Arduino",
+    "Python",
+    "Flask",
+    "JavaScript",
+    "3D printing"
+  ],
+  "cover": {
+    "image": "/media/mobile-robot/final-robot-thumb.webp",
+    "alt": "3D-printed robot car on a toy road mat",
+    "fit": "cover"
+  },
+  "coverIcon": "none",
+  "gallery": [
+    {
+      "file": "/media/mobile-robot/final-robot.webp",
+      "thumb": "/media/mobile-robot/final-robot-thumb.webp",
+      "poster": "",
+      "alt": "Final robot with its 3D-printed housing",
+      "caption": "Final robot with its 3D-printed housing"
+    },
+    {
+      "file": "/media/mobile-robot/prototype.webp",
+      "thumb": "/media/mobile-robot/prototype-thumb.webp",
+      "poster": "",
+      "alt": "Cardboard prototype used to test the code and electronics",
+      "caption": "Cardboard prototype used to test the code and electronics"
+    },
+    {
+      "file": "/media/mobile-robot/keyboard-control.webp",
+      "thumb": "/media/mobile-robot/keyboard-control-thumb.webp",
+      "poster": "",
+      "alt": "Keyboard control page with the D key lit",
+      "caption": "Keyboard control page with the D key lit"
+    },
+    {
+      "file": "/media/mobile-robot/phone-control.webp",
+      "thumb": "/media/mobile-robot/phone-control-thumb.webp",
+      "poster": "",
+      "alt": "Phone control page with direction buttons",
+      "caption": "Phone control page with direction buttons"
+    },
+    {
+      "file": "/media/mobile-robot/flask-server.webp",
+      "thumb": "/media/mobile-robot/flask-server-thumb.webp",
+      "poster": "",
+      "alt": "Flask server code that relays key presses to the Arduino",
+      "caption": "Flask server code that relays key presses to the Arduino"
+    }
+  ],
+  "videos": [],
+  "links": []
+}

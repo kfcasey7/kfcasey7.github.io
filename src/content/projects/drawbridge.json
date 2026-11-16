@@ -1,0 +1,58 @@
+{
+  "title": "Arduino Drawbridge",
+  "year": "freshman",
+  "order": 1,
+  "course": "CETA Design Expo",
+  "period": "Fall 2023",
+  "role": "Team of three",
+  "highlight": "2nd of 50+ at the 2023 Freshman Engineering Competition",
+  "status": "",
+  "summary": "A model drawbridge that senses an approaching boat, stops traffic and lifts its span on its own.",
+  "problem": "Build a working system for the CETA Design Expo inside a 6 ft × 6 ft footprint, using one Arduino and at least two sensors from the ELEGOO kit, in the few weeks between mid-November and early December.",
+  "approach": "Ultrasonic sensors under the bridge watch for a passing boat. After several consistent readings the Arduino drives two stepper motors that wind string to raise the popsicle-stick span, swings two servo roadblocks down across the road, and switches LED signals for cars and boats.",
+  "result": "The project placed 2nd of 50+ at the 2023 Freshman Engineering Competition. At the expo the span raised and the roadblocks lowered on command; connecting the ultrasonic trigger to the stop/go LEDs was the remaining step.",
+  "tags": [
+    "Arduino",
+    "Stepper motors",
+    "Servos",
+    "Ultrasonic sensing"
+  ],
+  "cover": {
+    "image": "/media/drawbridge/bridge-build-thumb.webp",
+    "alt": "Popsicle-stick drawbridge between two towers on a workbench",
+    "fit": "cover"
+  },
+  "coverIcon": "none",
+  "gallery": [
+    {
+      "file": "/media/drawbridge/bridge-build.webp",
+      "thumb": "/media/drawbridge/bridge-build-thumb.webp",
+      "poster": "",
+      "alt": "Drawbridge span between its two towers during the build",
+      "caption": "Drawbridge span between its two towers during the build"
+    },
+    {
+      "file": "/media/drawbridge/truss.webp",
+      "thumb": "/media/drawbridge/truss-thumb.webp",
+      "poster": "",
+      "alt": "Popsicle-stick truss span",
+      "caption": "Popsicle-stick truss span"
+    },
+    {
+      "file": "/media/drawbridge/sketch.webp",
+      "thumb": "/media/drawbridge/sketch-thumb.webp",
+      "poster": "",
+      "alt": "Hand sketch of the bridge and towers on graph paper",
+      "caption": "Hand sketch of the bridge and towers on graph paper"
+    },
+    {
+      "file": "/media/drawbridge/breadboard.webp",
+      "thumb": "/media/drawbridge/breadboard-thumb.webp",
+      "poster": "",
+      "alt": "Breadboard wiring for the sensors and LEDs",
+      "caption": "Breadboard wiring for the sensors and LEDs"
+    }
+  ],
+  "videos": [],
+  "links": []
+}

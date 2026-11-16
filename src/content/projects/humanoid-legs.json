@@ -1,0 +1,39 @@
+{
+  "title": "Low-Cost 3D-Printed Humanoid Legs",
+  "year": "senior",
+  "order": 1,
+  "course": "Senior capstone",
+  "period": "2026 – 2027",
+  "role": "Two-person team: hip and ankle joints, ROS 2 control",
+  "highlight": "",
+  "status": "In progress",
+  "summary": "Designing the hips and ankles of an open, 3D-printed humanoid research platform, with ROS 2 control aimed at standing and balancing.",
+  "problem": "Humanoid research platforms often cost well over $10,000 (a Unitree G1 starts at $13,500), which keeps them out of reach for many university labs and student teams.",
+  "approach": "We are building a modular platform from FFF 3D-printed parts that labs can print, repair and extend with common equipment. Our scope is the legs: a 2-DOF hip and a 2-DOF ankle driven by integrated joint motors with built-in drivers and encoders, carbon-fiber-filled plastic near the motors and PETG elsewhere, load cells and an IMU in each foot, and an ankle-hip balance controller in ROS 2 with Pinocchio, tested in a digital twin before it touches hardware.",
+  "result": "The proposal is complete, with requirements, trade studies and component selections. Targets include under $1,200 for the hip and ankle hardware, a 200 Hz control loop and unsupported standing for more than 10 minutes.",
+  "tags": [
+    "ROS 2",
+    "Pinocchio",
+    "MuJoCo",
+    "3D printing",
+    "Balance control",
+    "CAD"
+  ],
+  "cover": {
+    "image": "/media/humanoid-legs/block-diagram-thumb.webp",
+    "alt": "System block diagram for the humanoid legs",
+    "fit": "contain"
+  },
+  "coverIcon": "none",
+  "gallery": [
+    {
+      "file": "/media/humanoid-legs/block-diagram.webp",
+      "thumb": "/media/humanoid-legs/block-diagram-thumb.webp",
+      "poster": "",
+      "alt": "System block diagram for the humanoid legs",
+      "caption": "System block diagram for the humanoid legs"
+    }
+  ],
+  "videos": [],
+  "links": []
+}

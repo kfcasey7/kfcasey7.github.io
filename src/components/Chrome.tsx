@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { BriefcaseBusiness, Cpu, House, Mail, MessageSquare, Bot, UserRound } from 'lucide-react'
-import { profile } from '../data/profile'
+import { profile } from '../lib/content'
 
 const items = [
   { id: 'home', label: 'Home', Icon: House },

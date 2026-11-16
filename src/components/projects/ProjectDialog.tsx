@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, Play, Trophy, X } from 'lucide-react'
-import type { Media, Project } from '../../data/projects'
+import type { Media, Project } from '../../lib/content'
 import { Lightbox } from './Lightbox'
 
 type Props = {

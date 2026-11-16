@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowDown, Download } from 'lucide-react'
-import { profile } from '../data/profile'
+import { profile } from '../lib/content'
 import { NetworkBackground } from './NetworkBackground'
 
 function useTyping(words: string[], enabled: boolean) {
@@ -30,7 +30,8 @@ function useTyping(words: string[], enabled: boolean) {
 
 export function Hero() {
   const reduce = useReducedMotion()
-  const role = useTyping(profile.roles, !reduce)
+  const roles = profile.roles.length ? profile.roles : ['Robotics engineer']
+  const role = useTyping(roles, !reduce)
   const enter = (delay: number) =>
     reduce
       ? {}
@@ -62,7 +63,7 @@ export function Hero() {
           {...enter(0.45)}
           className="font-wide mt-6 h-[1.4em] text-[clamp(1.25rem,3.4vw,2rem)] font-medium text-sage"
         >
-          <span className="sr-only">{profile.roles.join(', ')}</span>
+          <span className="sr-only">{roles.join(', ')}</span>
           <span aria-hidden="true">
             {role}
             {!reduce && <span className="ml-0.5 inline-block w-[0.08em] animate-pulse bg-sage align-[-0.1em]">&nbsp;</span>}

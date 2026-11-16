@@ -1,0 +1,50 @@
+{
+  "title": "Library Management System",
+  "year": "sophomore",
+  "order": 2,
+  "course": "CS 220, Data Structures",
+  "period": "Sophomore year",
+  "role": "Team project",
+  "highlight": "",
+  "status": "",
+  "summary": "A Java library catalog built on a custom hash table, with borrowing, returns and a by-genre view.",
+  "problem": "Design a data structure around library ISBN numbers that handles the everyday operations of a small library.",
+  "approach": "Books live in a hash table keyed by ISBN, with chained nodes to handle collisions. A menu-driven program lets a user borrow, return, look up, add and remove books, and lists the whole catalog grouped by genre.",
+  "result": "All seven menu operations worked against a preloaded sample library. Testing caught a mix-up between int and long types for ISBNs. Next steps would be a real database and a friendlier interface.",
+  "tags": [
+    "Java",
+    "Hash tables",
+    "Data structures"
+  ],
+  "cover": {
+    "image": "/media/library-system/menu-thumb.webp",
+    "alt": "Terminal showing the library menu and a borrowed book",
+    "fit": "contain"
+  },
+  "coverIcon": "none",
+  "gallery": [
+    {
+      "file": "/media/library-system/menu.webp",
+      "thumb": "/media/library-system/menu-thumb.webp",
+      "poster": "",
+      "alt": "Library menu borrowing a book by ISBN",
+      "caption": "Library menu borrowing a book by ISBN"
+    },
+    {
+      "file": "/media/library-system/by-genre.webp",
+      "thumb": "/media/library-system/by-genre-thumb.webp",
+      "poster": "",
+      "alt": "Catalog listed by genre",
+      "caption": "Catalog listed by genre"
+    },
+    {
+      "file": "/media/library-system/add-book.webp",
+      "thumb": "/media/library-system/add-book-thumb.webp",
+      "poster": "",
+      "alt": "Adding a new book",
+      "caption": "Adding a new book"
+    }
+  ],
+  "videos": [],
+  "links": []
+}

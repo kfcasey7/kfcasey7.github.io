@@ -1,0 +1,26 @@
+{
+  "title": "Intro to Pinocchio Tutorial",
+  "year": "junior",
+  "order": 4,
+  "course": "ROBO 303 Honors Project",
+  "period": "Junior year",
+  "role": "Solo honors project",
+  "highlight": "",
+  "status": "",
+  "summary": "A step-by-step web tutorial that takes students from a SolidWorks arm model to forward and inverse kinematics in Pinocchio.",
+  "problem": "Give students one clear path from CAD to working kinematics code, set up for the Windows laptops the university recommends.",
+  "approach": "The tutorial walks through designing a simple arm in SolidWorks, exporting it to URDF with its joint constraints, installing WSL2, Miniconda and Pinocchio, then loading and inspecting the model, programming forward and inverse kinematics, and visualizing the arm in Meshcat.",
+  "result": "A complete tutorial site built in Google Sites, covering setup through visualization.",
+  "tags": [
+    "Pinocchio",
+    "Python",
+    "URDF",
+    "SolidWorks",
+    "WSL2",
+    "Meshcat"
+  ],
+  "coverIcon": "book",
+  "gallery": [],
+  "videos": [],
+  "links": []
+}

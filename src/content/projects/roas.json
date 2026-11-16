@@ -1,0 +1,52 @@
+{
+  "title": "Roundnet Officiating Aid System (ROAS)",
+  "year": "personal",
+  "order": 2,
+  "course": "",
+  "period": "Personal project",
+  "role": "Solo design project",
+  "highlight": "",
+  "status": "Design and prototyping",
+  "summary": "An embedded system that tells a rim hit from a net hit by the way the frame vibrates.",
+  "problem": "Roundnet has no referee, and the hardest call is whether the ball touched the rim or the net. In fast rallies the difference is often invisible, so teams argue and replay the point.",
+  "approach": "A rim hit is short and sharp (about 1–5 ms of contact); a net hit is slow and soft (about 10–30 ms). Five ±200 g ADXL375 accelerometers, one per rim arc, feed an Arduino Mega through an I2C multiplexer. Each impact triggers a capture that is run through time-domain features and an FFT, classified, and a buzzer sounds on a rim hit. I chose the ADXL375 because the other candidates either missed the rim’s signature or clipped on hard hits.",
+  "result": "The architecture is specified and the capture-and-classify firmware is written. Next: build the five-sensor rig, collect labeled rim, net, pocket and roll-up hits, and check that they separate before tuning thresholds and training a classifier.",
+  "tags": [
+    "Arduino C++",
+    "FFT",
+    "Accelerometers",
+    "I2C",
+    "Signal processing"
+  ],
+  "cover": {
+    "image": "/media/roas/sensor-mount-thumb.webp",
+    "alt": "Accelerometer prototype mounted on a yellow rim section",
+    "fit": "cover"
+  },
+  "coverIcon": "none",
+  "gallery": [
+    {
+      "file": "/media/roas/sensor-mount.webp",
+      "thumb": "/media/roas/sensor-mount-thumb.webp",
+      "poster": "",
+      "alt": "Prototype sensor mount on a rim section",
+      "caption": "Prototype sensor mount on a rim section"
+    },
+    {
+      "file": "/media/roas/architecture.webp",
+      "thumb": "/media/roas/architecture-thumb.webp",
+      "poster": "",
+      "alt": "Five rim sensors feed one real-time FFT pipeline",
+      "caption": "Five rim sensors feed one real-time FFT pipeline"
+    },
+    {
+      "file": "/media/roas/clip.mp4",
+      "thumb": "",
+      "poster": "/media/roas/clip-poster.webp",
+      "alt": "Short clip of the sensor mount",
+      "caption": "Sensor mount, short clip"
+    }
+  ],
+  "videos": [],
+  "links": []
+}

@@ -1,0 +1,261 @@
+# Dashboard settings for https://kfcasey7.github.io/admin
+# Every save commits straight to the main branch, and GitHub Actions rebuilds the site.
+
+backend:
+  name: github
+  repo: kfcasey7/kfcasey7.github.io
+  branch: main
+  commit_messages:
+    create: 'Add {{collection}} "{{slug}}" from dashboard'
+    update: 'Update {{collection}} "{{slug}}" from dashboard'
+    delete: 'Delete {{collection}} "{{slug}}" from dashboard'
+    uploadMedia: 'Upload "{{path}}" from dashboard'
+    deleteMedia: 'Delete "{{path}}" from dashboard'
+
+site_url: https://kfcasey7.github.io
+display_url: https://kfcasey7.github.io
+logo:
+  src: /favicon.svg
+
+# Uploads land in public/media/uploads and are served from /media/uploads.
+media_folder: public/media/uploads
+public_folder: /media/uploads
+
+media_libraries:
+  all:
+    max_file_size: 26214400 # 25 MB, so videos stay small enough for GitHub Pages
+    transformations:
+      raster_image: # photos (JPEG, PNG, HEIC...) are converted to compressed WebP
+        format: webp
+        quality: 82
+        width: 1800
+        height: 1800
+
+collections:
+  # ── Projects: one file per project ─────────────────────────
+  - name: projects
+    label: Projects
+    label_singular: Project
+    description: Each project appears in the carousel for its year. Lower "Order" numbers show first.
+    folder: src/content/projects
+    extension: json
+    format: json
+    create: true
+    delete: true
+    identifier_field: title
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [title, year, order]
+    view_groups:
+      - label: Year
+        field: year
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Project title, widget: string }
+      - name: year
+        label: Section
+        widget: select
+        default: personal
+        options:
+          - { label: Freshman year, value: freshman }
+          - { label: Sophomore year, value: sophomore }
+          - { label: Junior year, value: junior }
+          - { label: Senior year, value: senior }
+          - { label: Personal projects, value: personal }
+      - name: order
+        label: Order within its section
+        widget: number
+        value_type: int
+        default: 10
+        hint: 1 shows first in the carousel.
+      - { name: course, label: Course or event, widget: string, required: false, hint: 'For example "ROBO 301, Robotics and Automation". Leave empty for personal projects.' }
+      - { name: period, label: When, widget: string, hint: 'For example "Fall 2025" or "May 2025 – present".' }
+      - { name: role, label: Your role or team, widget: string, hint: 'For example "Team of three" or "Solo design project".' }
+      - { name: highlight, label: Award or standout result, widget: string, required: false, hint: Shows with a trophy icon on the card. }
+      - { name: status, label: Status badge, widget: string, required: false, hint: 'For example "In progress". Leave empty for finished projects.' }
+      - { name: summary, label: One-sentence summary, widget: text, hint: Shown on the card and at the top of the details view. }
+      - { name: problem, label: Problem, widget: text }
+      - { name: approach, label: Approach, widget: text }
+      - { name: result, label: Result, widget: text, hint: 'If the project has a status badge, this is shown as "Where it stands".' }
+      - { name: tags, label: Technologies, widget: list, hint: The first four show on the card. }
+      - name: cover
+        label: Card image
+        widget: object
+        required: false
+        collapsed: false
+        fields:
+          - { name: image, label: Image, widget: image, required: false }
+          - { name: alt, label: Description for screen readers, widget: string, required: false }
+          - name: fit
+            label: How the image fits the card
+            widget: select
+            default: cover
+            options:
+              - { label: Fill the card (best for photos), value: cover }
+              - { label: Show the whole image (best for diagrams and screenshots), value: contain }
+      - name: coverIcon
+        label: Drawn card cover (used when there is no card image)
+        widget: select
+        default: none
+        options:
+          - { label: None, value: none }
+          - { label: Book, value: book }
+          - { label: Truck, value: truck }
+      - name: gallery
+        label: Gallery
+        label_singular: photo or clip
+        widget: list
+        required: false
+        collapsed: auto
+        summary: '{{caption}}'
+        hint: Photos and short clips shown in the project's details. Click one on the site to enlarge it.
+        fields:
+          - { name: file, label: Photo or video file, widget: file, hint: Photos are converted to WebP automatically. Videos should be MP4. }
+          - { name: caption, label: Caption, widget: string }
+          - { name: alt, label: Description for screen readers, widget: string, required: false, hint: Leave empty to reuse the caption. }
+          - { name: poster, label: Video preview image, widget: image, required: false, hint: Videos only. }
+          - { name: thumb, label: Smaller preview image, widget: image, required: false, hint: Optional. The full photo is used if empty. }
+      - name: videos
+        label: Demo videos
+        label_singular: video
+        widget: list
+        required: false
+        summary: '{{title}}'
+        hint: Adding at least one shows a "Demo video" button on the card.
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: file, label: 'Video file (MP4, under 25 MB)', widget: file }
+          - { name: poster, label: Preview image, widget: image, required: false }
+      - name: links
+        label: Links
+        label_singular: link
+        widget: list
+        required: false
+        summary: '{{label}}'
+        fields:
+          - { name: label, label: Button text, widget: string, hint: 'For example "Open the tutorial".' }
+          - { name: url, label: Web address, widget: string }
+
+  # ── Everything else on the site ────────────────────────────
+  - name: site
+    label: About, experience & skills
+    editor:
+      preview: false
+    files:
+      - name: profile
+        label: Profile, hero & About
+        file: src/content/profile.json
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: roles, label: Rotating lines under your name, widget: list }
+          - { name: tagline, label: Hero introduction, widget: text }
+          - { name: email, label: Email, widget: string }
+          - { name: linkedin, label: LinkedIn address, widget: string }
+          - { name: github, label: GitHub address, widget: string, required: false }
+          - { name: resume, label: Resume PDF, widget: file, required: false, hint: Adds a "Download resume" button. Use a copy without your home address or phone number. }
+          - name: headshot
+            label: Portrait
+            widget: object
+            fields:
+              - { name: image, label: Photo, widget: image }
+              - { name: alt, label: Description for screen readers, widget: string }
+          - name: bio
+            label: About paragraphs
+            label_singular: paragraph
+            widget: list
+            field: { name: paragraph, label: Paragraph, widget: text }
+          - name: stats
+            label: Highlight cards
+            label_singular: card
+            widget: list
+            max: 3
+            summary: '{{value}}'
+            fields:
+              - { name: value, label: Big text, widget: string }
+              - { name: label, label: Small text, widget: string }
+          - name: education
+            label: Education
+            widget: object
+            fields:
+              - { name: school, label: School, widget: string }
+              - { name: degree, label: Degree, widget: string }
+              - { name: detail, label: Details, widget: string, required: false }
+              - { name: period, label: Years, widget: string }
+
+      - name: experience
+        label: Experience timeline
+        file: src/content/experience.json
+        fields:
+          - name: items
+            label: Timeline entries (newest first)
+            label_singular: entry
+            widget: list
+            summary: '{{title}}, {{org}}'
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: org, label: Organization, widget: string }
+              - { name: place, label: Location, widget: string }
+              - { name: period, label: Dates, widget: string }
+              - name: icon
+                label: Icon
+                widget: select
+                default: briefcase
+                options:
+                  - { label: Briefcase, value: briefcase }
+                  - { label: Truck, value: truck }
+                  - { label: People, value: users }
+                  - { label: Robot, value: bot }
+                  - { label: Tent, value: tent }
+                  - { label: Award, value: award }
+              - name: points
+                label: Bullet points
+                label_singular: bullet
+                widget: list
+                field: { name: point, label: Bullet, widget: text }
+
+      - name: skills
+        label: Skills
+        file: src/content/skills.json
+        fields:
+          - name: groups
+            label: Skill groups
+            label_singular: group
+            widget: list
+            summary: '{{name}}'
+            hint: The first two groups are shown wider.
+            fields:
+              - { name: name, label: Group name, widget: string }
+              - { name: blurb, label: Short description, widget: string }
+              - name: icon
+                label: Icon
+                widget: select
+                options:
+                  - { label: Robot, value: bot }
+                  - { label: Circuit board, value: circuit }
+                  - { label: Code, value: code }
+                  - { label: Ruler, value: ruler }
+                  - { label: Waves, value: waves }
+              - { name: skills, label: Skills, widget: list }
+
+      - name: sections
+        label: Year section titles
+        file: src/content/sections.json
+        fields:
+          - name: years
+            label: Sections (in page order)
+            label_singular: section
+            widget: list
+            summary: '{{label}}'
+            fields:
+              - name: id
+                label: Which section
+                widget: select
+                options:
+                  - { label: Freshman year, value: freshman }
+                  - { label: Sophomore year, value: sophomore }
+                  - { label: Junior year, value: junior }
+                  - { label: Senior year, value: senior }
+                  - { label: Personal projects, value: personal }
+              - { name: label, label: Heading, widget: string }
+              - { name: blurb, label: Line beside the heading, widget: string }

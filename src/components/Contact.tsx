@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { ArrowUpRight, Check, LoaderCircle, Mail, Send } from 'lucide-react'
-import { profile } from '../data/profile'
+import { profile } from '../lib/content'
 import { Section } from './Section'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'

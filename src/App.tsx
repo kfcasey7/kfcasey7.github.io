@@ -5,7 +5,7 @@ import { Experience } from './components/Experience'
 import { Hero } from './components/Hero'
 import { Projects } from './components/projects/Projects'
 import { Skills } from './components/Skills'
-import { profile } from './data/profile'
+import { profile } from './lib/content'
 
 export default function App() {
   return (
