@@ -17,7 +17,11 @@
     "Field service",
     "Project management"
   ],
-  "cover": null,
+  "cover": {
+    "image": "/media/uploads/1789418504438.webp",
+    "alt": "",
+    "fit": "cover"
+  },
   "coverIcon": "none",
   "gallery": [
     {
