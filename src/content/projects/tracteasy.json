@@ -17,8 +17,17 @@
     "Field service",
     "Project management"
   ],
+  "cover": null,
   "coverIcon": "truck",
-  "gallery": [],
+  "gallery": [
+    {
+      "file": "/media/uploads/pasted-image-1794806795936.svg",
+      "caption": "Flown Phases",
+      "alt": "An example of the hierarchical and sequential relationship",
+      "poster": "",
+      "thumb": ""
+    }
+  ],
   "videos": [],
   "links": []
 }
